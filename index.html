@@ -1,0 +1,99 @@
+<!-- The following are the few refferece websites from where the help was taken to buit the Milestone2_Navigations
+1) https://www.youtube.com/channel/UC7pVho4O31FyfQsZdXWejEw
+2) https://www.w3schools.com/howto/howto_js_topnav.asp
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Milestone2_Navigations</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
+</head>
+<body>
+
+      <nav>
+            <div>
+                  <i class="fa fa-bars"></i>
+            </div>
+
+            <ul>
+
+                  <li><a href="#">About Us<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">Missions & Visions Statement</a>
+                          <a href="#">Structure</a>
+                          <a href="#">Current Vacant Positions</a>
+                          <a href="#">History</a>
+                          <a href="#">Founding Members</a>
+                        </ul>
+                  </li>
+                    <li><a href="#">Contact Us <i class="fa fa-sort-desc"></i></a>
+                    </li>
+
+                  <li><a href="#">Employment <i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">Donations</a>
+                          <a href="#">Funding</a>
+                          <a href="#">Working for Tangentyere</a>
+                          <a href="#">How to Apply</a>
+                          <a href="#">Selection Process </a>
+                        </ul>
+                  </li>
+                  <li><a href="#">Publications<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">Office of Director</a>
+
+                        </ul>
+                  </li>
+                  <li><a href="#">Enterprises<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                          <a href="#">Governance</a>
+                          <a href="#">Tangentyere Design</a>
+                          <a href="#">Tangentyere Artists</a>
+                          <a href="#">Tangentyere Constitution</a>
+               </ul>
+               </li>
+               <li><a href="#">Services<i class="fa fa-sort-desc"></i></a>
+                     <ul>
+                       <a href="#">Tangentyere Employment Services</a>
+                       <a href="#">Family & youth Services</a>
+                       <a href="#">Housing Services</a>
+                     </ul>
+                   </li>
+
+                    <li><a href="#">Links<i class="fa fa-sort-desc"></i></a>
+                    </li>
+
+
+
+
+
+      </nav>
+
+      <script type="text/javascript">
+
+      $("nav div").click(function() {
+            $("ul").slideToggle();
+            $("ul ul").css("display", "none");
+      });
+
+      $("ul li").click(function() {
+            $("ul ul").slideUp();
+            $(this).find('ul').slideToggle();
+      });
+
+      $(window).resize(function() {
+            if($(window).width() > 768) {
+                  $("ul").removeAttr('style');
+            }
+      });
+
+      </script>
+
+</body>
+</html>
